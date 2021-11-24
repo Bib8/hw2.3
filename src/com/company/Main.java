@@ -4,12 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
         //Объявите переменные всех типов, что мы изучили на уроке, и присвойте им любые значения (инициализируйте их).
+
         byte a = 1;
         short b = 129;
         int c = 300;
         long l = 7000L;
         double d = 2.89;
         float f = 2.4f;
+        char ch = 'a';
+        boolean bln = true;
 
         /*В боксе, перед каждым боем, спортсменов взвешивают – это делают для того, чтобы убедиться,
         что боксеры соответствуют своей весовой категории, и бой будет честным.
@@ -18,12 +21,12 @@ public class Main {
         Подсчитайте и выведите в консоль общий вес двух бойцов.
         Подсчитайте и выведите в консоль разницу между весами бойцов.*/
 
-        double FirstBoxerWeigth = 78.2; //boxer 1 weigth
-        double SecondBoxerWeigth = 82.7; //boxer 2 weigth
-        double SumWeigth = FirstBoxerWeigth + SecondBoxerWeigth; // sum of both boxers
-        double DifWeigth = SecondBoxerWeigth - FirstBoxerWeigth; //dif of 2 boxers
-        System.out.println("Summary weigth of both boxers is " + (SumWeigth) + "kg");
-        System.out.println("Diffirance weigth of both boxers is " + (DifWeigth) + "kg");
+        double firstBoxerWeigth = 78.2; //boxer 1 weigth
+        double secondBoxerWeigth = 82.7; //boxer 2 weigth
+        double sumWeigth = firstBoxerWeigth + secondBoxerWeigth; // sum of both boxers
+        double difWeigth = secondBoxerWeigth - firstBoxerWeigth; //dif of 2 boxers
+        System.out.println("Summary weigth of both boxers is " + (sumWeigth) + "kg");
+        System.out.println("Diffirance weigth of both boxers is " + (difWeigth) + "kg");
 
         /*За весом спортсмена следит не только сам спортсмен, но и его тренер.
         Он достигается и поддерживается упорными тренировками и сбалансированным питанием.
@@ -36,16 +39,16 @@ public class Main {
         Подсчитайте вес (количество грамм) такого спорт-завтрака, а затем переведите его в килограммы.
         Результат напечатайте в консоль.*/
 
-        int bananas = 80; // grams per 1 banana
-        int milk = 105; // grams in 100ml of milk
-        int icecream = 100;
-        int egg = 70;
+        int bananaWeight = 80; // grams per 1 banana
+        int milkWeightPer100Ml = 105; // grams in 100ml of milk
+        int icecreamWeight = 100;
+        int eggWeight = 70;
         int bananasQty = 5;
-        int milkQty = 2;
-        int icecreamqty = 2;
+        int milkQty = 200;
+        int icecreamQty = 2;
         int eggsQty = 4;
-
-        int milkShake = bananas * bananasQty + milk * milkQty + icecream * icecreamqty + egg * eggsQty; // weigth of milk shake
+        int milkMlToGr = milkQty/100*milkWeightPer100Ml;
+        int milkShake = bananaWeight * bananasQty + milkMlToGr + icecreamWeight * icecreamQty + eggWeight * eggsQty; // weigth of milk shake
         double milkShakeWeigth = milkShake/1000d;
 
         System.out.println("your milkshake in gramms " + (milkShake) + " in kilo " + milkShakeWeigth + "kg");
@@ -60,13 +63,13 @@ public class Main {
         Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
         Результаты подсчетов выведите в консоль.*/
 
-        int totalWeight_less = 7000;
+        int totalWeightless = 7000;
         int quarterLostPerDay = 250;
         int halfLostPerDay = 500;
         double avgResult = (quarterLostPerDay + halfLostPerDay)/2f;
-        int firstRes = totalWeight_less/quarterLostPerDay;
-        int secRes = totalWeight_less/halfLostPerDay;
-        float avgRes = (float) (totalWeight_less/avgResult);
+        int firstRes = totalWeightless/quarterLostPerDay;
+        int secRes = totalWeightless/halfLostPerDay;
+        float avgRes = (float) (totalWeightless/avgResult);
         System.out.println("if loose 250gr per day? it takes: " + (firstRes));
         System.out.println("if loose 500gr per day? it takes: " + (secRes));
         System.out.println("if loose the average per day? it takes: " + (avgRes));
@@ -89,24 +92,25 @@ public class Main {
 
         double percent = 1.1;
 
-        int MarySalary = 67_760;
-        int DenSalary = 83_690;
-        int CrisSalary = 76_230;
+        float marySalary = 67_760;
+        float denSalary = 83_690;
+        float crisSalary = 76_230;
 
-        int MarySalaryPromo = (int) (MarySalary*percent);
-        int DenSalaryPromo = (int) (DenSalary*percent);
-        int CrisSalaryPromo = (int) (CrisSalary*percent);
+        int marySalaryPromo = (int) (marySalary*percent);
+        int denSalaryPromo = (int) (denSalary*percent);
+        int crisSalaryPromo = (int) (crisSalary*percent);
 
-        int difMarySalary = MarySalaryPromo - MarySalary;
-        int difDenSalary = DenSalaryPromo - DenSalary;
-        int difCrisSalary = CrisSalaryPromo - CrisSalary;
+        float difmarySalary = marySalaryPromo - marySalary;
+        float difdenSalary = denSalaryPromo - denSalary;
+        float difcrisSalary = crisSalaryPromo - crisSalary;
 
-        int MarySalaryDifPerYear = difMarySalary * 12;
-        int DenSalaryDifPerYear = difDenSalary * 12;
-        int CrisSalaryDifPerYear = difCrisSalary * 12;
+        float marySalaryDifPerYear = difmarySalary * 12;
+        float denSalaryDifPerYear = difdenSalary * 12;
+        float crisSalaryDifPerYear = difcrisSalary * 12;
 
-        System.out.println("Маша теперь получает " + (MarySalaryPromo) + "рублей. Годовой доход вырос на " + (MarySalaryDifPerYear) + "рублей");
-        System.out.println("Денис теперь получает " + (DenSalaryPromo) + "рублей. Годовой доход вырос на " + (DenSalaryDifPerYear) + "рублей");
-        System.out.println("Кристина теперь получает " + (CrisSalaryPromo) + "рублей. Годовой доход вырос на " + (CrisSalaryDifPerYear) + "рублей");
+        System.out.println("Маша теперь получает " + (marySalaryPromo) + "рублей. Годовой доход вырос на " + (marySalaryDifPerYear) + "рублей");
+        System.out.println("Денис теперь получает " + (denSalaryPromo) + "рублей. Годовой доход вырос на " + (denSalaryDifPerYear) + "рублей");
+        System.out.println("Кристина теперь получает " + (crisSalaryPromo) + "рублей. Годовой доход вырос на " + (crisSalaryDifPerYear) + "рублей");
+
     }
 }
